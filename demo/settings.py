@@ -12,7 +12,7 @@ SECRET_KEY = 'ratn!684yf7ewt-%j%afwf7et9c=!oan$=w6#)fn#4u$ie4!as'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 INTERNAL_IPS = [
     '127.0.0.1'
@@ -57,7 +57,7 @@ MIDDLEWARE = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    # 'material.frontend.middleware.SmoothNavigationMiddleware',
+    'material.frontend.middleware.SmoothNavigationMiddleware',
 )
 
 ROOT_URLCONF = 'demo.urls'
@@ -103,7 +103,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'demo.website.users',
                 'demo.website.testing_types',
-                'material.frontend.context_processors.modules',
+                # 'material.frontend.context_processors.modules',
             ],
             'debug': True,
         },
@@ -145,3 +145,5 @@ try:
     from demo.local_settings import *  # NOQA
 except ImportError:
     pass
+
+
