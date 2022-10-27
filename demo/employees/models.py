@@ -56,10 +56,10 @@ class DeptManager(models.Model):
 
 class Employee(models.Model):
     emp_no = models.IntegerField(_('employee number'), primary_key=True)
-    birth_date = models.DateField(_('birthday'))
+    birth_date = models.DateField(_('birthday'), blank=True)
     first_name = models.CharField(_('first name'), max_length=14)
     last_name = models.CharField(_('last name'), max_length=16)
-    gender = models.CharField(_('gender'), max_length=1)
+    gender = models.CharField(_('gender'), max_length=1, blank=True)
     hire_date = models.DateField(_('hire date'))
 
     class Meta:

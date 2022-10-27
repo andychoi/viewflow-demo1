@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 class employee(models.Model):
 
     birthday = models.DateTimeField(verbose_name=u"Date of Birth")
-    passport_id = models.CharField(verbose_name=u'passport No',max_length=1024)
+    # passport_id = models.CharField(verbose_name=u'passport No',max_length=1024, blank=True)
     sex = models.CharField(
         max_length=1,
         choices=(
@@ -15,13 +15,13 @@ class employee(models.Model):
     marital= models.CharField(
         max_length=10,
         choices=(('single', 'Single'), ('married', 'Married'), ('widower', 'Widower'), ('divorced', 'Divorced')))
-    department= models.ForeignKey('hr.department',related_name='member', on_delete=models.CASCADE,)
-    address=models.CharField(verbose_name=u'Working Address',max_length=1024)
-    work_phone= models.CharField(verbose_name=u'Work Phone',max_length=1024)
-    mobile_phone= models.CharField(verbose_name=u'Work Mobile',max_length=1024)
-    work_email= models.CharField(verbose_name=u'Work Email',max_length=1024)
-    work_location= models.CharField(verbose_name=u'Office Location',max_length=1024)
-    notes= models.CharField(verbose_name=u'Notes',max_length=1024)
+    department= models.ForeignKey('hr.department',related_name='member', on_delete=models.CASCADE, blank=True)
+    address=models.CharField(verbose_name=u'Working Address',max_length=1024, blank=True)
+    work_phone= models.CharField(verbose_name=u'Work Phone',max_length=1024, blank=True)
+    mobile_phone= models.CharField(verbose_name=u'Work Mobile',max_length=1024, blank=True)
+    work_email= models.CharField(verbose_name=u'Work Email',max_length=1024, blank=True)
+    work_location= models.CharField(verbose_name=u'Office Location',max_length=1024, blank=True)
+    notes= models.CharField(verbose_name=u'Notes',max_length=1024, blank=True)
     Manager=models.ForeignKey('hr.employee', blank=True, null=True, related_name='lead_member', on_delete=models.CASCADE,)
 
     #
