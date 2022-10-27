@@ -1,5 +1,6 @@
 import django
-from django.conf.urls import include, url
+# from django.conf.urls import include, url
+from django.urls import re_path, include
 from django.contrib import admin
 from django.contrib.auth import views as auth
 from django.views import generic
@@ -16,7 +17,7 @@ class Demo(ModuleMixin):
     """
     order = 1
     label = 'Introduction'
-    verbose_name = '我的桌面'
+    verbose_name = 'Introduction'
     icon = '<i class="material-icons">account_balance</i>'
 
     @property
@@ -24,7 +25,7 @@ class Demo(ModuleMixin):
         index_view = generic.TemplateView.as_view(template_name='demo/index.html')
 
         return frontend.ModuleURLResolver(
-            '^', [url('^$', index_view, name="index")],
+            '^', [re_path('^$', index_view, name="index")],
             module=self, app_name='demo', namespace='demo')
 
     def index_url(self):
@@ -44,8 +45,8 @@ if django.VERSION < (1, 7):
 from material.frontend import urls as frontend_urls  # NOQA
 
 urlpatterns = [
-    url(r'^accounts/login/$', auth.login, name='login'),
-    url(r'^accounts/logout/$', auth.logout, name='logout'),
-    url(r'^', include('demo.website')),
-    url(r'', include(frontend_urls)),
+    re_path(r'^accounts/login/$', auth.LoginView.as_view(), name='login'),
+    re_path(r'^accounts/logout/$', auth.LogoutView.as_view(), name='logout'),
+    re_path(r'^', include('demo.website')),
+    re_path(r'', include(frontend_urls)),
 ]

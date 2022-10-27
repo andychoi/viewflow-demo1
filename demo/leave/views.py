@@ -8,7 +8,7 @@ from viewflow.flow.views.utils import get_next_task_url
 import django.utils.timezone as timezone
 from django.http import HttpResponse
 from django.utils.safestring import mark_safe
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .forms import *
 from .models import *
@@ -54,7 +54,7 @@ class ProcessListView(BaseProcessListView):
         return mark_safe(_('<a href="/leave/leave/action/delete/'+str(process.id)+'">删除</a>'))
 
     resion.short_description = _('原因')
-    dep_approved_l.short_description = _('部门审核')
+    dep_approved_l.short_description = _('Department审核')
     hr_approved_l.short_description = _('人事审核')
     operate.short_description = _('操作')
 
@@ -132,7 +132,7 @@ class LeaveStartView(StartFlowMixin,generic.CreateView):
 
     layout = Layout(
         Fieldset('基本信息',Row('req_by','depart_name', 'position','req_date')),
-        Fieldset('请假',Row('req_class', 'file_url'),
+        Fieldset('leave',Row('req_class', 'file_url'),
         Row('start_time','end_time'),
         'resion',)
     )

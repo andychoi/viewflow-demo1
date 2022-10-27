@@ -9,8 +9,8 @@ from .views import *
 @frontend.register
 class LeaveFlow(Flow):
     process_class = LeaveProcess
-    summary_template = "{{ process.leave.req_by.user.username }}的请假"
-    process_title = '请假'
+    summary_template = "{{ process.leave.req_by.user.username }} of leave"
+    process_title = 'Request for leave'
 
     start = (
         flow.Start(

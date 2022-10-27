@@ -13,7 +13,7 @@ msgstr ""
 #: apps.py:10 templates/employees/department_employees.html:7
 #: templates/employees/menu.html:4
 msgid "Employees"
-msgstr "雇员"
+msgstr "Employee"
 
 #: forms.py:8
 msgid "manager"
@@ -41,11 +41,11 @@ msgstr "部"
 
 #: models.py:16
 msgid "departments"
-msgstr "部门"
+msgstr "Department"
 
 #: models.py:26 models.py:41 models.py:65 models.py:75 models.py:91
 msgid "employee"
-msgstr "雇员"
+msgstr "Employee"
 
 #: models.py:28 models.py:43 models.py:77 models.py:93
 msgid "from"
@@ -57,19 +57,19 @@ msgstr "至"
 
 #: models.py:34
 msgid "department employee"
-msgstr "部门员工"
+msgstr "Department员工"
 
 #: models.py:35
 msgid "department employees"
-msgstr "部门员工"
+msgstr "Department员工"
 
 #: models.py:49
 msgid "department manager"
-msgstr "部门经理"
+msgstr "Department经理"
 
 #: models.py:50
 msgid "department managers"
-msgstr "部门经理"
+msgstr "Department经理"
 
 #: models.py:57
 msgid "employee number"
@@ -97,7 +97,7 @@ msgstr "聘用日期"
 
 #: models.py:66 views.py:137
 msgid "employees"
-msgstr "雇员"
+msgstr "Employee"
 
 #: models.py:86
 msgid "salaries"
@@ -125,7 +125,7 @@ msgstr "工资历史"
 
 #: templates/employees/change_salary.html:43
 msgid "Set new Salary"
-msgstr "新工资"
+msgstr "New 工资"
 
 #: templates/employees/change_title.html:7
 msgid "Change Title"
@@ -171,7 +171,7 @@ msgstr ""
 
 #: templates/employees/department_detail.html:37
 msgid "Department Managers"
-msgstr "部门经理"
+msgstr "Department经理"
 
 #: templates/employees/department_detail.html:41
 msgid "Manager"
@@ -179,7 +179,7 @@ msgstr "经理"
 
 #: templates/employees/employee_detail.html:55 templates/employees/menu.html:3
 msgid "Departments"
-msgstr "部门"
+msgstr "Department"
 
 #: templates/employees/employee_detail.html:59
 msgid "Department"

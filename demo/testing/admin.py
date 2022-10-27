@@ -1,12 +1,12 @@
 from django.contrib import admin
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 # Register your models here.
 import django.utils.timezone as timezone
 from django.utils.safestring import mark_safe
 from django.contrib import admin
 from .models import *
 from .forms import *
-from django.core.urlresolvers import resolve
+from django.urls import resolve
 
 # Register your models here.
 

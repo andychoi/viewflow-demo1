@@ -6,5 +6,5 @@ from material.frontend.registry import modules
 class HrConfig(AppConfig,ModuleMixin):
     name = 'demo.hr'
     label = 'hr'
-    verbose_name='资源管理'
+    verbose_name='Human Resource Management'
     icon = '<i class="material-icons">book</i>'

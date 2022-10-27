@@ -48,7 +48,7 @@ class LeaveDepCheckForm(forms.ModelForm):
         'dep_approved',
         'dep_approved_comment',
     )
-    dep_approved =forms.ChoiceField(label='部门审核',choices=((1, "同意"),
+    dep_approved =forms.ChoiceField(label='Department审核',choices=((1, "同意"),
             (-1, "不同意"),))
     dep_approved_comment = forms.CharField(label='审核意见',widget=forms.Textarea)
 

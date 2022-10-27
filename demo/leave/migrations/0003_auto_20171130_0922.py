@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
         migrations.AlterField(
             model_name='leaveprocess',
             name='dep_approved',
-            field=models.IntegerField(default=0, verbose_name='部门审核'),
+            field=models.IntegerField(default=0, verbose_name='Department审核'),
         ),
         migrations.AlterField(
             model_name='leaveprocess',

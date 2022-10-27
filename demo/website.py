@@ -1,9 +1,9 @@
-from django.conf.urls import url
+from django.urls import re_path
 from django.contrib.auth import login, logout
 from django.contrib.auth.models import User
 from django.http import HttpResponseRedirect
 from django.shortcuts import redirect
-from django.utils.http import is_safe_url
+from django.utils.http import url_has_allowed_host_and_scheme
 from .testing.models import TestingType
 
 
@@ -41,12 +41,12 @@ def login_as(request):
         logout(request)
 
     redirect_to = request.GET.get('next')
-    if not redirect_to or not is_safe_url(redirect_to):
+    if not redirect_to or not url_has_allowed_host_and_scheme(redirect_to):
         return redirect('/admin/testing/contract')
     else:
         return HttpResponseRedirect(redirect_to)
 
 
 urlpatterns = [
-    url(r'^login_as/$', login_as, name="login_as")
+    re_path(r'^login_as/$', login_as, name="login_as")
 ]

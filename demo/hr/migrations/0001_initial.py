@@ -24,8 +24,8 @@ class Migration(migrations.Migration):
                 ('note', models.CharField(max_length=1024, verbose_name='Note')),
             ],
             options={
-                'verbose_name': '部门',
-                'verbose_name_plural': '部门',
+                'verbose_name': 'Department',
+                'verbose_name_plural': 'Department',
                 'db_table': 'hr.department',
             },
         ),
@@ -48,8 +48,8 @@ class Migration(migrations.Migration):
                 ('user', models.OneToOneField(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL, verbose_name='账号绑定')),
             ],
             options={
-                'verbose_name': '雇员',
-                'verbose_name_plural': '雇员',
+                'verbose_name': 'Employee',
+                'verbose_name_plural': 'Employee',
                 'db_table': 'hr.employee',
             },
         ),

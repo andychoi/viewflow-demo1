@@ -1,4 +1,4 @@
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from material import Layout, Row, Fieldset
 from material.frontend.views import ModelViewSet
@@ -38,7 +38,7 @@ class CountryViewSet(ModelViewSet):
     list_display = (
         'tld', 'name', 'continent',
         'became_independent_in_20_century',
-        'gay_friendly')
+        )
     list_display_links = ('tld', 'name', )
 
     def tld(self, country):

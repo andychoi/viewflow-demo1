@@ -15,6 +15,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='leave',
             name='comment',
-            field=models.CharField(blank=True, max_length=256, null=True, verbose_name='备注'),
+            field=models.CharField(blank=True, max_length=256, null=True, verbose_name='Remark'),
         ),
     ]

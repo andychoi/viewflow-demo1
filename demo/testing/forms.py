@@ -40,7 +40,7 @@ class ContractForm(forms.ModelForm):
     testing_class = forms.ChoiceField(label='检测类别' ,choices=(('1', "委托"),('2', "型检"),('3', "监督"),('4', "仲裁"),('4', "摸底"),('4', "检查"),))
     testing_time_class = forms.ChoiceField( label='检测时间' ,choices=(('1', "常规"),('2', "加急"),('2', "特急"),))
     testing_fee_tax_class = forms.ChoiceField( label='发票类别' ,choices=(('1', "增值税普通发票"),('2', "增值税专用发票"),))
-    #testing_times = forms.MultipleChoiceField(label='测试项目A')
+    #testing_times = forms.MultipleChoiceField(label='Test itemsA')
 
 
     # def __init__(self, *args, **kwargs):

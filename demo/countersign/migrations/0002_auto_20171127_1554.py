@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='cs_process',
             name='file',
-            field=models.FileField(default='blank', upload_to='./upload/', verbose_name='会签文件'),
+            field=models.FileField(default='blank', upload_to='./upload/', verbose_name='countersigned文件'),
             preserve_default=False,
         ),
         migrations.AlterField(

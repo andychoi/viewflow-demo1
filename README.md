@@ -1,9 +1,23 @@
+python -m venv .venv
+    source .venv/bin/activate
+iii. initialize virtual environment and install requirements from requirements.txt (
+    pip install -r requirements.txt
+iv. python manage.py makemigrations
+v. python manage.py migrate
+
+    python manage.py createsuperuser
+    
+vi. run server from base directory:
+
+    python manage.py runserver 0.0.0.0:8001
+
+
 vfOA
-==========
+=========
 
-vfOA是基于Viewflow的OA演示系统，能够快速实现数据的CURD以及流程处理，可开发轻量级OA/CRM/ERP等系统。
+vfOA is an OA demonstration system based on Viewflow, which can quickly realize data CURD and process processing, and can develop lightweight OA/CRM/ERP systems.
 
-更多内容请参考django-viewflow、django-materia
+For more information, please refer to django-viewflow, django-materia
 ## Installation and Dependencies:
 
  django==1.11.7
@@ -22,17 +36,17 @@ vfOA是基于Viewflow的OA演示系统，能够快速实现数据的CURD以及�
  python manage.py runserver 8888
 
 ## Photos:
-编辑界面
-![编辑界面](https://raw.githubusercontent.com/htwenhe/vfOA/master/img/1.PNG)
+Edit interface
+![Edit interface](https://raw.githubusercontent.com/htwenhe/vfOA/master/img/1.PNG)
 
-列表页面
-![列表页面](https://raw.githubusercontent.com/htwenhe/vfOA/master/img/2.PNG)
+list page
+![List page](https://raw.githubusercontent.com/htwenhe/vfOA/master/img/2.PNG)
 
-代办事项
-![代办事项](https://raw.githubusercontent.com/htwenhe/vfOA/master/img/3.PNG)
+To-do matters
+![TODO](https://raw.githubusercontent.com/htwenhe/vfOA/master/img/3.PNG)
 
-流程处理
-![流程处理](https://raw.githubusercontent.com/htwenhe/vfOA/master/img/4.PNG)
+Process processing
+![Process processing](https://raw.githubusercontent.com/htwenhe/vfOA/master/img/4.PNG)
 
-流程信息展示
-![流程信息展示](https://raw.githubusercontent.com/htwenhe/vfOA/master/img/5.PNG)
+Process information display
+![Process information display](https://raw.githubusercontent.com/htwenhe/vfOA/master/img/5.PNG)
