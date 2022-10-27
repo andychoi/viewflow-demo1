@@ -8,3 +8,7 @@ class EmployeeViewSet(ModelViewSet):
 class DepartmentViewSet(ModelViewSet):
 
     model = models.department
+
+    list_display = (
+        'name', 'leader', 'note',
+    )

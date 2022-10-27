@@ -26,6 +26,7 @@ INSTALLED_APPS = (
     'viewflow',
 
     # material
+    'material.theme.bluegrey',
     'material',
     'material.frontend',
     'material.admin',

@@ -25,7 +25,7 @@ class employee(models.Model):
     Manager=models.ForeignKey('hr.employee', blank=True, null=True, related_name='lead_member', on_delete=models.CASCADE,)
 
     #
-    user = models.OneToOneField(User, verbose_name=u"account binding", on_delete=models.CASCADE,)
+    user = models.OneToOneField(User, verbose_name=u"account binding", on_delete=models.CASCADE, blank=True)
     # image: all image fields are base64 encoded and PIL-supported
     #image=models.ImageField(verbose_name=u"Photo")
     class Meta:
