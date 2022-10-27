@@ -8,7 +8,7 @@ class Ocean(models.Model):
     area = models.BigIntegerField(_('area'))
     slug = models.SlugField(_('slug'))
     description = models.TextField(_('description'))
-    map_url = models.URLField(_('map url'))
+    map_url = models.URLField(_('map url'), blank=True)
 
     class Meta:
         verbose_name = _('ocean')
