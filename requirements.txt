@@ -4,7 +4,7 @@
 # django-material==1.1.1
 # django-viewflow==1.1.0
 
-Django==4.1.2
+Django==4.1.7
 django-filter==22.1
 django-formtools==2.4
 django-material==1.11.3
